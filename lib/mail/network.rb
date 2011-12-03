@@ -1,13 +1,11 @@
 require 'mail/network/retriever_methods/base'
 
-module Mail
-  autoload :SMTP, 'mail/network/delivery_methods/smtp'
-  autoload :FileDelivery, 'mail/network/delivery_methods/file_delivery'
-  autoload :Sendmail, 'mail/network/delivery_methods/sendmail'
-  autoload :SMTPConnection, 'mail/network/delivery_methods/smtp_connection'
-  autoload :TestMailer, 'mail/network/delivery_methods/test_mailer'
+require 'mail/network/delivery_methods/smtp'
+require 'mail/network/delivery_methods/file_delivery'
+require 'mail/network/delivery_methods/sendmail'
+require 'mail/network/delivery_methods/smtp_connection'
+require 'mail/network/delivery_methods/test_mailer'
 
-  autoload :POP3, 'mail/network/retriever_methods/pop3'
-  autoload :IMAP, 'mail/network/retriever_methods/imap'
-  autoload :TestRetriever, 'mail/network/retriever_methods/test_retriever'
-end
+require 'mail/network/retriever_methods/pop3'
+require 'mail/network/retriever_methods/imap'
+require 'mail/network/retriever_methods/test_retriever'
